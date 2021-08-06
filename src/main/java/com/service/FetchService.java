@@ -55,7 +55,7 @@ public class FetchService {
 		String url = "http://localhost:9090/user";
 		URI uri = new URI(url);
 
-		HttpEntity<User> request = new HttpEntity<>(user, headers);
+		HttpEntity<User> request = new HttpEntity<User>(user, headers);
 
 		return restTemplate.postForEntity(uri, request, User.class).getBody();
 	}
@@ -71,7 +71,7 @@ public class FetchService {
 		String url = "http://localhost:9090/employee";
 		URI uri = new URI(url);
 
-		HttpEntity<Employee> request = new HttpEntity<>(employee, headers);
+		HttpEntity<Employee> request = new HttpEntity<Employee>(employee, headers);
 
 		try {
 			restTemplate.postForEntity(uri, request, Employee.class).getBody();
@@ -95,7 +95,7 @@ public class FetchService {
 		String url = "http://localhost:9090/employee/" + code;
 		URI uri = new URI(url);
 
-		HttpEntity<Employee> request = new HttpEntity<>(employee, headers);
+		HttpEntity<Employee> request = new HttpEntity<Employee>(employee, headers);
 
 		return restTemplate.postForEntity(uri, request, Employee.class).getBody();
 	}
