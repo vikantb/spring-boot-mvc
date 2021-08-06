@@ -21,7 +21,7 @@ import com.model.User;
  */
 @Component
 public class FetchService {
-
+ 
 	private final RestTemplate restTemplate;
 	private HttpHeaders headers;
 
